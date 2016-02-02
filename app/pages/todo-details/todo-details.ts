@@ -13,6 +13,7 @@ export class TodoDetailsPage{
     nav;
     TodoPage;
     todoIndex;
+    editing;
 
     constructor(navParams:NavParams, nav:NavController){
         this.todo = navParams.get('todo');

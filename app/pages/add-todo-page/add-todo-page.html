@@ -1,0 +1,33 @@
+<ion-navbar *navbar>
+    <ion-title>
+        Add
+    </ion-title>
+</ion-navbar>
+
+
+<ion-content>
+    <ion-list>
+<!--        <ion-item>
+            <ion-input floating-label>
+                <label for="title"></label>
+                <input type="text" name="title" value="title" id="title" [(ngModel)]="title">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input floating-label>
+                <label for="description"></label>
+                <input type="text" name="description" value="description" id="description" [(ngModel)]="description">
+            </ion-input>
+        </ion-item>-->
+        <ion-item>
+            <input type="text" value="title" [(ngModel)]="title">
+        </ion-item>
+        <ion-item>
+            <input type="text" value="description" [(ngModel)]="description">
+        </ion-item>
+        <ion-item>
+            <button (click)="addTodo(title,description)">add</button>
+        </ion-item>
+    </ion-list>
+</ion-content>
