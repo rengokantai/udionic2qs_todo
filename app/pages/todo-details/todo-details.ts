@@ -13,11 +13,14 @@ export class TodoDetailsPage{
     nav;
     TodoPage;
     todoIndex;
+
     constructor(navParams:NavParams, nav:NavController){
         this.todo = navParams.get('todo');
         this.nav=nav;
         this.TodoPage = navParams.get('TodoPage');
         this.todoIndex = navParams.get('todoIndex');
+
+        this.editing = false;
     }
 
     deleteTodo(){

@@ -6,15 +6,27 @@
 
 <ion-content>
     <ion-card>
-        <ion-card-header>
+        <ion-card-header text-center *ngIf="!editing">
             {{todo.title}}
         </ion-card-header>
+        <ion-card-header text-center *ngIf="editing">
+            <input type="text" [(ngModel)]="todo.title" value="todo.title">
+        </ion-card-header>
         <ion-card-content>
-            {{todo.description}}
-            {{todo.completed}}
+
+            <ion-list>
+                <ion-item *ngIf="!editing">
+                    {{todo.description}}
+                </ion-item>
+                <ion-item *ngIf="editing">
+                    <input type="text" [(ngModel)]="todo.description" value="todo.desctiption">
+                </ion-item>
+            </ion-list>
             <ion-checkbox [(ngModel)]="todo.completed">
                 completed?
             </ion-checkbox>
+            <button light block (click)="editing= !editing" *ngIf="!editing">edit</button>
+            <button secondary block (click)="editing= !editing" *ngIf="editing">save</button>
             <button danger block (click)="deleteTodo()">delete</button>
         </ion-card-content>
     </ion-card>
