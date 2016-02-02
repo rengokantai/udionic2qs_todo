@@ -1,0 +1,21 @@
+<ion-navbar *navbar>
+    <ion-title>
+        {{todo.title}}
+    </ion-title>
+</ion-navbar>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            {{todo.title}}
+        </ion-card-header>
+        <ion-card-content>
+            {{todo.description}}
+            {{todo.completed}}
+            <ion-checkbox [(ngModel)]="todo.completed">
+                completed?
+            </ion-checkbox>
+            <button danger block (click)="deleteTodo()">delete</button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

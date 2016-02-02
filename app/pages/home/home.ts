@@ -1,6 +1,5 @@
 import {Page, NavController} from 'ionic-framework/ionic';
 import {TodoPage} from '../todo-page/todo-page';
-import {NavController} from "../../../node_modules/ionic-framework/components/nav/nav-controller";
 
 @Page({
   templateUrl: 'build/pages/home/home.html',

@@ -6,10 +6,8 @@
         <ion-card-header text-center>
                 todo
         </ion-card-header>
-        <ion-card-content>
-            <ion-list>
-                <ion-item *ngFor="#todo of todos"></ion-item>
-            </ion-list>
-        </ion-card-content>
+        <ion-list>
+            <button ion-item *ngFor="#todo of todos, #i=index" (click)="todoDetails($event, todo, i)">{{todo.title}}</button>
+        </ion-list>
     </ion-card>
 </ion-content>
